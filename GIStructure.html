@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>About GI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1><a href="index.html">General Insight</a></h1>
+  <div id="grid">
+    <div>
+      <br>
+      <ol>
+        <li><a href="AboutGi.html">About our Project</a></li>
+        <li><a href="GIStructure.html">Structure of GI</a></li>
+        <li><a href="Agile.html">Development Methodology</a></li>
+      </ol>
+    </div>
+    <div id="article">
+      <h2>Structure & Flow of GI</h2>
+      <img src="flowchart.png" width="100%">
+      <p style="margin-top:45px;">
+        1.frontend
+          <br>유저가 어플리케이션 사용
+
+        <br>2.backend
+            <br>-web server단(Ngnix, Apache)
+            <br>유저의 어플리케이션 사용 데이터를 받아옴
+
+            <br>-WAX단(Nodejs)
+            <br>정확하게 뭐하는건지 잘 모르겠음
+
+            <br>-큐 혹은 다른 방법 이용(Kafka, RabbitMQ)
+            <br>앞의 web server의 데이터들을 NoSQL 데이터베이스로 전송
+
+            <br>-NoSQL 데이터베이스(Elastic Search)
+            <br>전송받은 데이터를 취합, 보관
+
+            <br>-server API(Nodejs)
+            <br>데이터베이스에서 데이터를 받아와 처리, 우리가 원하는 정보로 만들어줌
+
+            <br>3.frontend
+            <br>  유저가 알아보기 쉽게 정보를 나타냄(react)
+
+            <br>  4.배포
+              <br>  Jenkins with Ansible CI/CD
+
+              <br>  5.개발 방법론
+              <br>Agile manifest
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
